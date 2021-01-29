@@ -5,7 +5,7 @@
 2. Copy paste je gemaakte SQL query hieronder
   SELECT races.name AS 'race', drivers.surname AS 'driver' , driver_standing.points AS 'punten' FROM races JOIN driver_standing ON driver_standing.raceId = races.raceId JOIN drivers WHERE races.year = 2017 AND driver_standing.points = 10
 3. Copy paste je gemaakte SQL query hieronder
-   SELECT drivers.forename AS 'voornaam' , drivers.surname AS 'achternaam', pitstops.milliseconds AS 'pitstop miliseconden'  FROM drivers RIGHT JOIN pitstops ON pitstops.driverId = drivers.driverId WHERE pitstops.milliseconds < 25000
+   SELECT drivers.forename AS 'voornaam' , drivers.surname AS 'achternaam', pitstops.milliseconds AS 'pitstop miliseconden'  FROM drivers JOIN pitstops ON pitstops.driverId = drivers.driverId WHERE pitstops.milliseconds < 25000
 4. Copy paste je gemaakte SQL query hieronder
    SELECT constructors.name , races.name as 'race' FROM constructor_standing JOIN constructors ON constructors.constructorId = constructor_standing.constructorId JOIN races ON races.raceId = constructor_standing.raceId WHERE races.year = 2017 AND constructors.name = 'McLaren'
 5. Copy paste je gemaakte SQL query hieronder
